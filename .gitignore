@@ -22,6 +22,12 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 
+# Ruby
+#
+/.bundle
+vendor/bundle
+Gemfile.lock
+
 # node.js
 #
 node_modules/
