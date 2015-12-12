@@ -38,6 +38,34 @@
 # Ignore Website
 .*/website/.*
 
+# Ignore devDependencies
+.*/node_modules/react/.*
+.*/node_modules/babel-eslint/.*
+.*/node_modules/babel-plugin-espower/.*
+.*/node_modules/babel-plugin-transform-class-properties/.*
+.*/node_modules/babel-preset-es2015/.*
+.*/node_modules/babel-preset-react/.*
+.*/node_modules/chokidar-cli/.*
+.*/node_modules/clear-require/.*
+.*/node_modules/codecov.io/.*
+.*/node_modules/esdoc/.*
+.*/node_modules/esdoc-es7-plugin/.*
+.*/node_modules/eslint/.*
+.*/node_modules/eslint-config-kanmu/.*
+.*/node_modules/eslint-plugin-react/.*
+.*/node_modules/flow-bin/.*
+.*/node_modules/isparta/.*
+.*/node_modules/mocha/.*
+.*/node_modules/npm-run-all/.*
+.*/node_modules/power-assert/.*
+.*/node_modules/proxyquire/.*
+.*/node_modules/react-addons-test-utils/.*
+.*/node_modules/react-shallow-testutils/.*
+.*/node_modules/sinon/.*
+
+# Ignore doc
+.*/doc/.*
+
 [include]
 
 [libs]
@@ -55,8 +83,8 @@ suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
 suppress_type=$FixMe
 
-suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(>=0\\.\\(1[0-8]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)
-suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(>=0\\.\\(1[0-8]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)? #[0-9]+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(>=0\\.\\(1[0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(>=0\\.\\(1[0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)? #[0-9]+
 suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 
 [version]

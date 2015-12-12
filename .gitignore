@@ -30,5 +30,6 @@ Gemfile.lock
 
 # node.js
 #
+.eslintcache
 node_modules/
 npm-debug.log
