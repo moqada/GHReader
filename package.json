@@ -1,7 +1,7 @@
 {
   "name": "GHReader",
+  "description": "GitHub Feed Reader for iOS",
   "version": "0.0.0",
-  "private": true,
   "dependencies": {
     "dacho": "^1.0.0",
     "react-native": "^0.16.0",
@@ -35,6 +35,7 @@
     "react-shallow-testutils": "^0.7.1",
     "sinon": "^1.17.2"
   },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/moqada/GHReader.git"
