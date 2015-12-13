@@ -14,8 +14,8 @@ before_install:
 install:
   - nvm install 5
   - npm install -g npm
-  - npm install
   - npm install -g react-native-cli
+  - npm install
   - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
   - bundle install --path=vendor/bundle
 before_script:
@@ -23,4 +23,4 @@ before_script:
 script:
   - npm test
 after_success:
-  - npm run codecov
+  - [ -f coverage/lcov.info ] && npm run codecov || echo 'coverage file not found'
