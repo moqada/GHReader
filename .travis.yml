@@ -2,6 +2,7 @@ sudo: false
 osx_image: xcode7
 language: objective-c
 cache:
+  edge: true
   directories:
     - .nvm
     - node_modules
