@@ -13,7 +13,6 @@ before_install:
   - source $(brew --prefix nvm)/nvm.sh
 install:
   - nvm install 5
-  - npm install -g npm
   - npm install -g react-native-cli
   - npm install
   - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
