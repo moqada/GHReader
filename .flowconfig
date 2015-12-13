@@ -63,6 +63,10 @@
 .*/node_modules/react-shallow-testutils/.*
 .*/node_modules/sinon/.*
 
+# Ignore for npm@3
+.*/node_modules/fbjs/.*
+.*/node_modules/babel/.*
+
 # Ignore doc
 .*/doc/.*
 
