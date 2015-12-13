@@ -23,4 +23,4 @@ before_script:
 script:
   - npm test
 after_success:
-  - [ -f coverage/lcov.info ] && npm run codecov || echo 'coverage file not found'
+  - "[ -f coverage/lcov.info ] && npm run codecov || echo 'coverage file not found'"
