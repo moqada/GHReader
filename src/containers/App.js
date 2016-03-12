@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react-native';
 import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux/native';
+import {connect} from 'react-redux';
 
 import * as actionCreators from '../actions/app';
 import type {AppState, Store} from '../flowtypes';
@@ -19,7 +19,7 @@ type DefaultProps = Props;
 /**
  * App Container
  */
-export default class App extends (React.Component: typeof ReactComponent) {
+class App extends (React.Component: typeof ReactComponent) {
 
   static defaultProps: DefaultProps;
   props: Props;
@@ -69,4 +69,4 @@ function mapDispachToProps(dispatch: Function): {actions: Object} {
   return {actions: bindActionCreators(actionCreators, dispatch)};
 }
 
-export default (connect(mapStateToProps, mapDispachToProps)(App): App);
+export default (connect(mapStateToProps, mapDispachToProps)(App): Class<App>);
