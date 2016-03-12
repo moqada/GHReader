@@ -14,17 +14,19 @@
 
 # Ignore react and fbjs where there are overlaps, but don't ignore
 # anything that react-native relies on
-.*/node_modules/fbjs-haste/.*/__tests__/.*
-.*/node_modules/fbjs-haste/__forks__/Map.js
-.*/node_modules/fbjs-haste/__forks__/Promise.js
-.*/node_modules/fbjs-haste/__forks__/fetch.js
-.*/node_modules/fbjs-haste/core/ExecutionEnvironment.js
-.*/node_modules/fbjs-haste/core/isEmpty.js
-.*/node_modules/fbjs-haste/crypto/crc32.js
-.*/node_modules/fbjs-haste/stubs/ErrorUtils.js
-.*/node_modules/react-haste/React.js
-.*/node_modules/react-haste/renderers/dom/ReactDOM.js
-.*/node_modules/react-haste/renderers/shared/event/eventPlugins/ResponderEventPlugin.js
+.*/node_modules/fbjs/lib/Map.js
+.*/node_modules/fbjs/lib/Promise.js
+.*/node_modules/fbjs/lib/fetch.js
+.*/node_modules/fbjs/lib/ExecutionEnvironment.js
+.*/node_modules/fbjs/lib/isEmpty.js
+.*/node_modules/fbjs/lib/crc32.js
+.*/node_modules/fbjs/lib/ErrorUtils.js
+
+# Flow has a built-in definition for the 'react' module which we prefer to use
+# over the currently-untyped source
+.*/node_modules/react/react.js
+.*/node_modules/react/lib/React.js
+.*/node_modules/react/lib/ReactDOM.js
 
 # Ignore commoner tests
 .*/node_modules/commoner/test/.*
@@ -39,12 +41,6 @@
 .*/website/.*
 
 # Ignore devDependencies
-.*/node_modules/react/.*
-.*/node_modules/babel-eslint/.*
-.*/node_modules/babel-plugin-espower/.*
-.*/node_modules/babel-plugin-transform-class-properties/.*
-.*/node_modules/babel-preset-es2015/.*
-.*/node_modules/babel-preset-react/.*
 .*/node_modules/chokidar-cli/.*
 .*/node_modules/clear-require/.*
 .*/node_modules/codecov.io/.*
@@ -63,13 +59,6 @@
 .*/node_modules/react-shallow-testutils/.*
 .*/node_modules/sinon/.*
 
-# Ignore for npm@3
-.*/node_modules/fbjs/.*
-.*/node_modules/babel/.*
-
-# Ignore for nvm
-.*/node_modules/npm/.*
-
 # Ignore doc
 .*/doc/.*
 
@@ -84,15 +73,15 @@ module.system=haste
 munge_underscores=true
 
 module.name_mapper='^image![a-zA-Z0-9$_-]+$' -> 'GlobalImageStub'
-module.name_mapper='^[./a-zA-Z0-9$_-]+\.png$' -> 'RelativeImageStub'
+module.name_mapper='^[./a-zA-Z0-9$_-]+\.\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\)$' -> 'RelativeImageStub'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
 suppress_type=$FixMe
 
-suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(>=0\\.\\(1[0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)
-suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(>=0\\.\\(1[0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)? #[0-9]+
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(>=0\\.\\(2[0-1]\\|1[0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(>=0\\.\\(2[0-1]\\|1[0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native[a-z,_]*\\)?)\\)?:? #[0-9]+
 suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 
 [version]
-0.18.1
+0.21.0
