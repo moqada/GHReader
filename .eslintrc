@@ -1,13 +1,5 @@
-extends: moqada/react
+extends:
+  - moqada
+  - moqada/react-native
+  - moqada/flow
 parser: babel-eslint
-globals:
-  __DEV__: true
-  ReactComponent: true
-  ReactElement: true
-rules:
-  require-jsdoc:
-    - 2
-    - require:
-        FunctionDeclaration: true
-        MethodDefinition: true
-        ClassDeclaration: false
