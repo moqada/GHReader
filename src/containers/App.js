@@ -1,12 +1,11 @@
 /* @flow */
-import React from 'react-native';
+import React from 'react';
+import {Text, View} from 'react-native';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
 import * as actionCreators from '../actions/app';
 import type {AppState, Store} from '../flowtypes';
-
-const {View, Text} = React;
 
 
 type Props = {
