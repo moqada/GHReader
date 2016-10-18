@@ -22,14 +22,25 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 
-# Ruby
+# Android/IJ
 #
-/.bundle
-vendor/bundle
-Gemfile.lock
+*.iml
+.idea
+.gradle
+local.properties
 
 # node.js
 #
-.eslintcache
 node_modules/
 npm-debug.log
+
+# BUCK
+buck-out/
+\.buckd/
+android/app/libs
+android/keystores/debug.keystore
+
+# Ruby
+/.bundle
+vendor/bundle
+Gemfile.lock
