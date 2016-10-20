@@ -9,21 +9,13 @@ const store = configureStore();
 
 /**
  * Root Container
+ *
+ * @return {React.Component}
  */
-export default class Root extends (React.Component: typeof ReactComponent) {
-  /**
-   * render
-   *
-   * @return {ReactElement}
-   */
-  render() {
-    /* eslint-disable react/display-name, react/jsx-key */
-    return (
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
-
-    /* eslint-enable */
-  }
+export default function Root() {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 }

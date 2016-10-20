@@ -37,7 +37,7 @@ class App extends (React.Component: typeof ReactComponent) {
    */
   render() {
     const label = this.props.app.initialized ? 'Hello GHReader!' : 'Waiting...';
-    const style = {flex: 1, justifyContent: 'center', alignItems: 'center'};
+    const style = {alignItems: 'center', flex: 1, justifyContent: 'center'};
     return (
       <View style={style}>
         <Text>{label}</Text>

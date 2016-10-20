@@ -1,10 +1,10 @@
 /* @flow */
 
 export type Action = {
-  type: string,
-  payload?: any,
+  error?: boolean,
   meta?: Object,
-  error?: boolean
+  payload?: any,
+  type: string
 };
 
 export type AppState = {

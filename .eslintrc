@@ -3,3 +3,6 @@ extends:
   - moqada/react-native
   - moqada/flow
 parser: babel-eslint
+rules:
+  object-curly-newline: off
+  react/forbid-component-props: off
