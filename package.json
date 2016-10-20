@@ -1,6 +1,6 @@
 {
   "name": "GHReader",
-  "description": "GitHub Feed Reader for iOS",
+  "description": "GitHub Feed Reader",
   "version": "0.0.0",
   "dependencies": {
     "dacho": "^2.0.1",

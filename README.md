@@ -5,7 +5,7 @@
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![DevDependency Status][daviddm-dev-image]][daviddm-dev-url]
 
-GitHub Feed Reader for iOS
+GitHub Feed Reader
 
 
 [travis-url]: https://travis-ci.org/moqada/GHReader
