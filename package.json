@@ -41,6 +41,9 @@
     "react-test-renderer": "^15.3.2",
     "sinon": "^1.17.6"
   },
+  "jest": {
+    "preset": "jest-react-native"
+  },
   "private": true,
   "repository": {
     "type": "git",
@@ -50,24 +53,20 @@
     "clean": "rm -rf coverage",
     "codecov": "cat coverage/lcov.info | codecov",
     "doc": "esdoc -c esdoc.json",
-    "lint": "eslint --cache {src,test}",
     "packager": "./node_modules/react-native/packager/packager.sh",
-    "postinstall": "XARGS_NO_RUN=`[ \\`uname\\` = 'Linux' ] && echo '--no-run-if-empty' || echo ''` && find ./node_modules -name .babelrc | grep -v react-native | grep -v /babel/ | xargs $XARGS_NO_RUN rm",
     "predoc": "rm -rf doc",
     "pretest": "rm -rf coverage",
     "start": "npm-run-all --parallel packager watch:*",
     "stop": "npm-run-all stop:*",
     "stop:flow": "flow stop",
-    "test": "npm-run-all lint test:*",
+    "test": "npm-run-all test:*",
     "test:coverage": "babel-node $(npm bin)/isparta cover --report text --report html --report lcovonly _mocha -- test/**/*spec.js",
-    "test:jest": "jest",
     "test:flow": "flow",
+    "test:jest": "jest",
+    "test:lint": "eslint --cache {src,test}",
     "watch": "npm-run-all --parallel watch:*",
     "watch:flow": "flow & chokidar src/ -c flow",
-    "watch:lint": "chokidar src/ test/ -c 'npm run -s lint'",
+    "watch:lint": "chokidar src/ test/ -c 'npm run -s test:lint'",
     "watch:test": "mocha --watch test/**/*spec.js"
-  },
-  "jest": {
-    "preset": "jest-react-native"
   }
 }
