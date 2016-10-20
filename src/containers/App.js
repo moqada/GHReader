@@ -49,8 +49,7 @@ class App extends (React.Component: typeof ReactComponent) {
 /**
  * map State to Props
  *
- * @param {Store} state store
- * @return {{app: AppState}}
+ * @param state - store
  */
 function mapStateToProps(state: Store): {app: AppState} {
   return {
@@ -61,8 +60,7 @@ function mapStateToProps(state: Store): {app: AppState} {
 /**
  * map Dispatch to Props
  *
- * @param {Function} dispatch dispatch
- * @return {{actions: Object}}
+ * @param dispatch - dispatch
  */
 function mapDispachToProps(dispatch: Function): {actions: Object} {
   return {actions: bindActionCreators(actionCreators, dispatch)};

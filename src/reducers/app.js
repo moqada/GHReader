@@ -6,9 +6,8 @@ import type {Action, AppState} from '../flowtypes';
 /**
  * App Reducer
  *
- * @param {AppState} state AppState
- * @param {Action} action action
- * @return {AppState}
+ * @param state - AppState
+ * @param action - action
  */
 export function app(state: AppState = {
   initialized: false

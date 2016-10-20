@@ -2,6 +2,7 @@ extends:
   - moqada
   - moqada/react-native
   - moqada/flow
+  - moqada/flow-jsdoc
 parser: babel-eslint
 rules:
   object-curly-newline: off

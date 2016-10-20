@@ -33,6 +33,7 @@ local.properties
 #
 .eslintcache
 /coverage/
+/doc/
 node_modules/
 npm-debug.log
 
