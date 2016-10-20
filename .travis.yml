@@ -15,7 +15,7 @@ before_install:
   - export NVM_DIR="$PWD/.nvm"
   - source $(brew --prefix nvm)/nvm.sh
 install:
-  - nvm install 5
+  - nvm install stable
   - npm install -g react-native-cli
   - npm install
   - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
