@@ -20,7 +20,7 @@
     "babel-preset-react-native": "^1.9.0",
     "chokidar-cli": "^1.2.0",
     "clear-require": "^1.0.1",
-    "codecov.io": "^0.1.6",
+    "codecov": "^1.0.1",
     "esdoc": "^0.4.8",
     "esdoc-es7-plugin": "0.0.3",
     "esdoc-flow-plugin": "^1.0.0",
@@ -53,7 +53,7 @@
   },
   "scripts": {
     "clean": "rm -rf coverage",
-    "codecov": "cat coverage/lcov.info | codecov",
+    "codecov": "codecov",
     "doc": "esdoc -c esdoc.json",
     "packager": "./node_modules/react-native/packager/packager.sh",
     "predoc": "rm -rf doc",
