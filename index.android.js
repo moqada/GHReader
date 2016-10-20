@@ -3,7 +3,7 @@ import {AppRegistry} from 'react-native';
 import Root from './src/containers/Root';
 
 /**
- * GHReader for iOS
+ * GHReader for Android
  */
 export default Root;
 
