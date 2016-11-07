@@ -21,6 +21,7 @@
     "chokidar-cli": "^1.2.0",
     "clear-require": "^1.0.1",
     "codecov": "^1.0.1",
+    "documentation": "^4.0.0-beta12",
     "esdoc": "^0.4.8",
     "esdoc-es7-plugin": "0.0.3",
     "esdoc-flow-plugin": "^1.0.0",
