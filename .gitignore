@@ -47,4 +47,3 @@ android/keystores/debug.keystore
 # Ruby
 /.bundle
 vendor/bundle
-Gemfile.lock
