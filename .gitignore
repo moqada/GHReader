@@ -32,6 +32,7 @@ local.properties
 # node.js
 #
 .eslintcache
+.nyc_output
 /coverage/
 /doc/
 node_modules/
