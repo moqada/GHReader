@@ -16,6 +16,7 @@ before_install:
   - source $(brew --prefix nvm)/nvm.sh
 install:
   - nvm install stable
+  - npm install -g yarn
   - yarn global add react-native-cli
   - yarn
   - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
