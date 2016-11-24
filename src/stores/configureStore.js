@@ -18,5 +18,13 @@ const createStoreWithMiddleware = applyMiddleware(
  * @return {Store} store
  */
 export default function configureStore(): Store {
-  return createStoreWithMiddleware(rootReducer);
+  const store = createStoreWithMiddleware(rootReducer);
+  if (module.hot && typeof module.hot.accept === 'function') {
+    module.hot.accept(() => {
+      // eslint-disable-next-line global-require
+      const nextRootReducer = require('../reducers/root').default;
+      store.replaceReducer(nextRootReducer);
+    });
+  }
+  return store;
 }

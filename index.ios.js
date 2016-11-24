@@ -1,10 +1,14 @@
 /* @flow */
-import {AppRegistry} from 'react-native';
-import Root from './src/containers/Root';
-
 /**
  * GHReader for iOS
  */
-export default Root;
+import React from 'react';
+import {AppRegistry} from 'react-native';
+import Root from './src/containers/Root';
+import configureStore from './src/stores/configureStore';
 
-AppRegistry.registerComponent('GHReader', () => Root);
+const store = configureStore();
+const GHReader = () => <Root store={store} />;
+export default GHReader;
+
+AppRegistry.registerComponent('GHReader', () => GHReader);
