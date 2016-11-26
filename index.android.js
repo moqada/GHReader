@@ -4,6 +4,7 @@
  */
 import React from 'react';
 import {AppRegistry} from 'react-native';
+import './src/reactotronConfig';
 import Root from './src/containers/Root';
 import configureStore from './src/stores/configureStore';
 
