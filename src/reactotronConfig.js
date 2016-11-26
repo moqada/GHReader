@@ -6,11 +6,12 @@ if (__DEV__) {
   Reactotron
     .configure({name: 'GHReader'})
     .use(trackGlobalErrors({
-      veto: frame => frame.fileName.indexOf('/node_modules/react-native/') >= 0
+      veto: frame => frame.fileName.indexOf('/node_modules/react-natve/') >= 0
     }))
     .use(reactotronRedux())
     .connect();
 
+  // $FlowFixMe: ignore this
   console.tron = Reactotron;
   Reactotron.clear();
 }
