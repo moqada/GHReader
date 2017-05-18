@@ -1,5 +1,7 @@
 # GHReader
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/moqada/GHReader.svg)](https://greenkeeper.io/)
+
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][codecov-image]][codecov-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
